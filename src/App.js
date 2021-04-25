@@ -1,8 +1,10 @@
 import React from "react";
-import PortfolioContainer from "./components/PortfolioContainer";
+import Navbar from "./components/Navbar";
 
 function App() {
-  return <PortfolioContainer />;
+    return (
+        <Navbar />
+    );
 }
 
 export default App;
