@@ -17,7 +17,9 @@ function App() {
     return (
         <div>
             <Navbar />
-            <EmployeeCard employee={employeesState[0]}/>
+            {employeesState.map(employee => {
+                return (<EmployeeCard employee={employee}/>);
+            })}
         </div>
     );
 }
