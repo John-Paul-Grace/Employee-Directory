@@ -2,8 +2,6 @@ import React from "react";
 import "./style.css";
 
 function EmployeeCard({ employee }) {
-    console.log(employee);
-
     if (!employee) {
         return <div />;
     }
