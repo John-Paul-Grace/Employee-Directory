@@ -9,7 +9,16 @@ export function Container({ fluid, children }) {
 
 // This Row component lets us use a bootstrap row without having to think about class names
 export function Row({ fluid, children }) {
-  return <div className={`row${fluid ? "-fluid" : ""}`}>{children}</div>;
+  console.log(children);
+
+  const compare = (next, current) => {
+    const nextLetter = next.key.charAt(2);
+    const currentLetter = current.key.charAt(2);
+
+    return nextLetter.localeCompare(currentLetter);
+  }
+
+  return <div className={`row${fluid ? "-fluid" : ""}`}>{React.Children.toArray(children).sort(compare)}</div>;
 }
 
 // This Col component lets us use bootstrap columns
