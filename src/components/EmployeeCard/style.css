@@ -1,0 +1,25 @@
+.width-18 {
+    width: 18rem;
+}
+
+.width-90per {
+    max-width: 90%
+}
+
+.centered {
+    text-align: center;
+}
+
+.subTitleStyle {
+    font-size: 18px;
+    font-weight:500;
+    line-height: initial;
+}
+
+.textStyle {
+    font-weight: initial;
+}
+
+.bg-grey {
+    background-color: rgb(197, 197, 197);
+}

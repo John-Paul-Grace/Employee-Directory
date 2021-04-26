@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import EmployeeCard from "./components/EmployeeCard";
 import Navbar from "./components/Navbar";
 import API from "./utils/API";
 
@@ -13,12 +14,11 @@ function App() {
             });
     }, []);
 
-    useEffect(() => {
-        console.log(employeesState);
-    }, [employeesState]);
-
     return (
-        <Navbar />
+        <div>
+            <Navbar />
+            <EmployeeCard employee={employeesState[0]}/>
+        </div>
     );
 }
 
