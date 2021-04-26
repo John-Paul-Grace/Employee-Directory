@@ -22,8 +22,8 @@ function App() {
                 <Row>
                     {employeesState.map(employee => {
                         return (
-                            <Col>
-                                <EmployeeCard employee={employee} key={employee.email} />
+                            <Col key={employee.name.last}>
+                                <EmployeeCard employee={employee} />
                             </Col>
                         );
                     })}
