@@ -28,8 +28,8 @@ Open the website using the application link above. Press the sort button to swit
 
 ## Screenshots
 
-![Screenshot](./public/screenshot-1.png)
-![Screenshot](./public/screenshot-2.png)
+![Screenshot](./public/Screenshot-1.png)
+![Screenshot](./public/Screenshot-2.png)
 
 ## Credits
 
