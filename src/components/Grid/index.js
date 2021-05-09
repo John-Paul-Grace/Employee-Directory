@@ -10,8 +10,16 @@ export function Container({ fluid, children }) {
 // This Row component lets us use a bootstrap row without having to think about class names
 export function Row({ fluid, children, ascending }) {
   const compare = (next, current) => {
-    const nextLetter = next.key.charAt(2);
-    const currentLetter = current.key.charAt(2);
+    let index = 1;
+    let nextLetter;
+    let currentLetter;
+
+    do {
+      index++;
+      nextLetter = next.key.charAt(index);
+      currentLetter = current.key.charAt(index);
+    }
+    while(typeof nextLetter === "string" && typeof currentLetter === "string" && nextLetter === currentLetter);
   
     if (ascending) {
       return currentLetter.localeCompare(nextLetter);
