@@ -8,14 +8,17 @@ export function Container({ fluid, children }) {
 }
 
 // This Row component lets us use a bootstrap row without having to think about class names
-export function Row({ fluid, children }) {
-  console.log(children);
-
+export function Row({ fluid, children, ascending }) {
   const compare = (next, current) => {
     const nextLetter = next.key.charAt(2);
     const currentLetter = current.key.charAt(2);
-
-    return nextLetter.localeCompare(currentLetter);
+  
+    if (ascending) {
+      return currentLetter.localeCompare(nextLetter);
+    }
+    else {
+      return nextLetter.localeCompare(currentLetter);
+    }
   }
 
   return <div className={`row${fluid ? "-fluid" : ""}`}>{React.Children.toArray(children).sort(compare)}</div>;
